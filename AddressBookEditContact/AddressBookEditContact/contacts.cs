@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AddressBookAddContact
+namespace AddressBookEditContact
 {
     class contacts
     {
@@ -14,6 +14,5 @@ namespace AddressBookAddContact
         public string Email { get; set; }
         public int Zip { get; set; }
         public long PhoneNumber { get; set; }
-
     }
 }

@@ -1,11 +1,12 @@
 ﻿using System;
 
-namespace AddressBookAddContact
+namespace AddressBookEditContact
 {
     class Program
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Welcome to Address Book Program");
             AddressBook addressBook = new AddressBook();
             Console.WriteLine("Enter First Name :");
             string firstName = Console.ReadLine();
@@ -24,6 +25,8 @@ namespace AddressBookAddContact
             Console.WriteLine("Enter Phone Number :");
             long phoneNumber = Convert.ToInt64(Console.ReadLine());
             addressBook.AddContact(firstName, lastName, address, city, state, email, zip, phoneNumber);
+            addressBook.ViewContact();
+            addressBook.EditContact(firstName);
             addressBook.ViewContact();
         }
     }
