@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AddressBookMultiplePerson
+namespace AddressBookMultipleAddress
 {
     class contacts
     {
