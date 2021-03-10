@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AddressBookDeletePerson
+namespace AddressBookMultiplePerson
 {
     class Program
     {
@@ -59,4 +59,5 @@ namespace AddressBookDeletePerson
             } while (choice != 6);
         }
     }
-}
+    }
+

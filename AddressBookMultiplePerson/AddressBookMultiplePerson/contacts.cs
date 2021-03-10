@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AddressBookDeletePerson
+namespace AddressBookMultiplePerson
 {
     class contacts
     {

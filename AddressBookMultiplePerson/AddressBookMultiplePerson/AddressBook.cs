@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AddressBookDeletePerson
+namespace AddressBookMultiplePerson
 {
-    class AddressBook : IContacts
+    class AddressBook : IContact
     {
         private Dictionary<string, contacts> addressBook = new Dictionary<string, contacts>();
         public void AddContact(string firstName, string lastName, string address, string city, string state, string email, int zip, long phoneNumber)
@@ -111,10 +111,12 @@ namespace AddressBookDeletePerson
                 Console.WriteLine("\nNot Found, Try Again.\n");
             }
         }
-
     }
 
-    internal interface IContacts
+    internal interface IContact
     {
     }
 }
+    
+    
+
