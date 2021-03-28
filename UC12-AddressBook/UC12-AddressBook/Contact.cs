@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UC11_AddressBook
+namespace UC2_AddressBook
 {
     class Contact
     {
