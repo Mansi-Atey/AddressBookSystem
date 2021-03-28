@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace AddressBookMultipleAddress
+namespace UC11_AddressBook
 {
     class Program
     {
@@ -27,7 +27,7 @@ namespace AddressBookMultipleAddress
             do
             {
                 Console.WriteLine($"Working On {bookName} AddressBook\n");
-                Console.WriteLine("Choose An Option \n1.Add New Contact \n2.Edit Existing Contact \n3.Delete A Contact \n4.View A Contact \n5.View All Contacts \n6.Add New AddressBook \n7.Switch AddressBook \n8.Exit Application\n");
+                Console.WriteLine("Choose An Option \n1.Add New Contact \n2.Edit Existing Contact \n3.Delete A Contact \n4.View A Contact \n5.View All Contacts \n6.Add New AddressBook \n7.Switch AddressBook \n8.Search Contact by City/State \n9.Count by City/State \n10.Sort Entries By Name \n0.Exit Application\n");
                 choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
@@ -36,6 +36,11 @@ namespace AddressBookMultipleAddress
                         string firstName = Console.ReadLine();
                         Console.WriteLine("Enter Last Name :");
                         string lastName = Console.ReadLine();
+                        Contact temp = new Contact(firstName, lastName, null, null, null, null, 0, 0);
+                        if (addressBook.CheckDuplicateEntry(temp, bookName))
+                        {
+                            break;
+                        }
                         Console.WriteLine("Enter Address :");
                         string address = Console.ReadLine();
                         Console.WriteLine("Enter City :");
@@ -51,17 +56,17 @@ namespace AddressBookMultipleAddress
                         addressBook.AddContact(firstName, lastName, address, city, state, email, zip, phoneNumber, bookName);
                         break;
                     case 2:
-                        Console.WriteLine("Enter First Name Of Contact To Edit :");
+                        Console.WriteLine("Enter Full Name Of Contact To Edit :");
                         string nameToEdit = Console.ReadLine();
                         addressBook.EditContact(nameToEdit, bookName);
                         break;
                     case 3:
-                        Console.WriteLine("Enter First Name Of Contact To Delete :");
+                        Console.WriteLine("Enter Full Name Of Contact To Delete :");
                         string nameToDelete = Console.ReadLine();
                         addressBook.DeleteContact(nameToDelete, bookName);
                         break;
                     case 4:
-                        Console.WriteLine("Enter First Name Of Contact To View :");
+                        Console.WriteLine("Enter Full Name Of Contact To View :");
                         string nameToView = Console.ReadLine();
                         addressBook.ViewContact(nameToView, bookName);
                         break;
@@ -100,11 +105,37 @@ namespace AddressBookMultipleAddress
                         }
                         break;
                     case 8:
+                        Console.WriteLine("Would You Like To \n1.Search by city \n2.Search by state");
+                        int opt = Convert.ToInt32(Console.ReadLine());
+                        switch (opt)
+                        {
+                            case 1:
+                                Console.WriteLine("Enter name of city :");
+                                addressBook.SearchPersonByCity(Console.ReadLine());
+                                break;
+                            case 2:
+                                Console.WriteLine("Enter name of state :");
+                                addressBook.SearchPersonByState(Console.ReadLine());
+                                break;
+                            default:
+                                Console.WriteLine("Invalid Input.Enter 1 or 2");
+                                break;
+                        }
+                        break;
+                    case 9:
+                        addressBook.DisplayCountByCityandState();
+                        break;
+                    case 10:
+                        addressBook.SortByName();
+                        break;
+                    case 0:
                         Console.WriteLine("Thank You For Using Address Book System.");
                         break;
+                    default:
+                        Console.WriteLine("Invalid Entry. Enter value between 0 to 8");
+                        break;
                 }
-            } while (choice != 8);
+            } while (choice != 0);
         }
     }
-    }
-
+}

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AddressBookMultipleAddress
+namespace UC11_AddressBook
 {
-    interface Icontact
+    interface IContacts
     {
         public void AddContact(string firstName, string lastName, string address, string city, string state, string email, int zip, long phoneNumber, string bookName);
         public void ViewContact(string name, string bookName);
