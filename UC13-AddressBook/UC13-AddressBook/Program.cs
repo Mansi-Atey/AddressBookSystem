@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace UC2_AddressBook
+namespace UC13_AddressBook
 {
     class Program
     {
@@ -31,7 +31,7 @@ namespace UC2_AddressBook
             do
             {
                 Console.WriteLine($"Working On {bookName} AddressBook\n");
-                Console.WriteLine("Choose An Option \n1.Add New Contact \n2.Edit Existing Contact \n3.Delete A Contact \n4.View A Contact \n5.View All Contacts \n6.Add New AddressBook \n7.Switch AddressBook \n8.Search Contact by City/State \n9.Count by City/State \n10.Sort Entries \n0.Exit Application\n");
+                Console.WriteLine("Choose An Option \n1.Add New Contact \n2.Edit Existing Contact \n3.Delete A Contact \n4.View A Contact \n5.View All Contacts \n6.Add New AddressBook \n7.Switch AddressBook \n8.Search Contact by City/State \n9.Count by City/State \n10.Sort Entries \n11.Read/Write AddressBook to text file \n0.Exit Application\n");
                 choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
@@ -150,6 +150,11 @@ namespace UC2_AddressBook
                                 Console.WriteLine("Invalid Choice");
                                 break;
                         }
+                        break;
+                    case 11:
+                        FileIOOperation fileIO = new FileIOOperation();
+                        fileIO.WriteToFile(addressBook.addressBookDictionary);
+                        fileIO.ReadFromFile();
                         break;
                     case 0:
                         Console.WriteLine("Thank You For Using Address Book System.");

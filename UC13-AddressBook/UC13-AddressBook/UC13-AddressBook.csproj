@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>UC2_AddressBook</RootNamespace>
+    <RootNamespace>UC13_AddressBook</RootNamespace>
   </PropertyGroup>
 
 </Project>
