@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace UC13_AddressBook
+namespace UC14_ReadWriteToCSVfile
 {
-    class Program
+   public class Program
     {
-        static void Main(string[] args)
+       public static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Address Book Program");
             AddressBook addressBook = new AddressBook();
@@ -31,7 +31,7 @@ namespace UC13_AddressBook
             do
             {
                 Console.WriteLine($"Working On {bookName} AddressBook\n");
-                Console.WriteLine("Choose An Option \n1.Add New Contact \n2.Edit Existing Contact \n3.Delete A Contact \n4.View A Contact \n5.View All Contacts \n6.Add New AddressBook \n7.Switch AddressBook \n8.Search Contact by City/State \n9.Count by City/State \n10.Sort Entries \n11.Read/Write AddressBook to text file \n0.Exit Application\n");
+                Console.WriteLine("Choose An Option \n1.Add New Contact \n2.Edit Existing Contact \n3.Delete A Contact \n4.View A Contact \n5.View All Contacts \n6.Add New AddressBook \n7.Switch AddressBook \n8.Search Contact by City/State \n9.Count by City/State \n10.Sort Entries \n11.Read/Write AddressBook to text file \n12.Read/Write AddressBook to csv file \n0.Exit Application\n");
                 choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
@@ -40,7 +40,11 @@ namespace UC13_AddressBook
                         string firstName = Console.ReadLine();
                         Console.WriteLine("Enter Last Name :");
                         string lastName = Console.ReadLine();
-                        Contact temp = new Contact(firstName, lastName, null, null, null, null, 0, 0);
+                        Contact temp = new Contact()
+                        {
+                            FirstName = firstName,
+                            LastName = lastName
+                        };
                         if (addressBook.CheckDuplicateEntry(temp, bookName))
                         {
                             break;
@@ -155,6 +159,11 @@ namespace UC13_AddressBook
                         FileIOOperation fileIO = new FileIOOperation();
                         fileIO.WriteToFile(addressBook.addressBookDictionary);
                         fileIO.ReadFromFile();
+                        break;
+                    case 12:
+                        CSVHandler handler = new CSVHandler();
+                        handler.WriteToFile(addressBook.addressBookDictionary);
+                        handler.ReadFromFile();
                         break;
                     case 0:
                         Console.WriteLine("Thank You For Using Address Book System.");

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace UC13_AddressBook
+namespace UC14_ReadWriteToCSVfile
 {
-    class AddressBook : IContacts
+   public class AddressBook : IContacts
     {
         internal Dictionary<string, Contact> addressBook = new Dictionary<string, Contact>();
         internal Dictionary<string, AddressBook> addressBookDictionary = new Dictionary<string, AddressBook>();
@@ -13,7 +13,17 @@ namespace UC13_AddressBook
         private Dictionary<Contact, string> stateDictionary = new Dictionary<Contact, string>();
         public void AddContact(string firstName, string lastName, string address, string city, string state, string email, int zip, long phoneNumber, string bookName)
         {
-            Contact contact = new Contact(firstName, lastName, address, city, state, email, zip, phoneNumber);
+            Contact contact = new Contact
+            {
+                FirstName = firstName,
+                LastName = lastName,
+                Address = address,
+                City = city,
+                State = state,
+                Email = email,
+                Zip = zip,
+                PhoneNumber = phoneNumber
+            };
             addressBookDictionary[bookName].addressBook.Add(contact.FirstName + " " + contact.LastName, contact);
             Console.WriteLine("\nAdded Succesfully. \n");
         }
@@ -285,6 +295,8 @@ namespace UC13_AddressBook
                 Console.WriteLine(item.Value.ToString());
             }
         }
-
     }
+
+
 }
+
