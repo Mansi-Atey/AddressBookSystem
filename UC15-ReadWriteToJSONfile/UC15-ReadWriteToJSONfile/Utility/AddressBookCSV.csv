@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UC14_ReadWriteToCSVfile.Utility
+namespace UC15_ReadWriteToJSONfile.Utility
 {
-    class ABRecords
+    class AddressBookCSV
     {
     }
 }

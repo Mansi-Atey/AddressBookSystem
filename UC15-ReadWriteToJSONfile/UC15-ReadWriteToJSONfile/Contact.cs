@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UC14_ReadWriteToCSVfile
+namespace UC15_ReadWriteToJSONfile
 {
    public class Contact
     {

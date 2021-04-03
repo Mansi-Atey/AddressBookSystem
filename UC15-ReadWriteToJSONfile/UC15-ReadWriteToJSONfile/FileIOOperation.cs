@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace UC14_ReadWriteToCSVfile
+namespace UC15_ReadWriteToJSONfile
 {
     public class FileIOOperation
     {
-        private string filePath = @"C:\Users\MansiAtey\Desktop\JSON\UC14-ReadWriteToCSVfile\UC14-ReadWriteToCSVfile\Utility\ABReacords.txt";
+        private string filePath = @"C:\Users\MansiAtey\Desktop\JSON\UC15-ReadWriteToJSONfile\UC15-ReadWriteToJSONfile\Utility\ABRecords.txt";
         public void WriteToFile(Dictionary<string, AddressBook> addressBookDictionary)
         {
             using StreamWriter writer = new StreamWriter(filePath, true);

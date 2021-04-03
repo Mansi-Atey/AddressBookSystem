@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace UC14_ReadWriteToCSVfile
+namespace UC15_ReadWriteToJSONfile
 {
-   public class AddressBook : IContacts
+    public class AddressBook : IContacts
     {
         internal Dictionary<string, Contact> addressBook = new Dictionary<string, Contact>();
         internal Dictionary<string, AddressBook> addressBookDictionary = new Dictionary<string, AddressBook>();
@@ -296,7 +296,5 @@ namespace UC14_ReadWriteToCSVfile
             }
         }
     }
-
-
 }
 

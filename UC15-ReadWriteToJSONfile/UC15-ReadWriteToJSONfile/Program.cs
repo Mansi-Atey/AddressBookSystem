@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace UC14_ReadWriteToCSVfile
+namespace UC15_ReadWriteToJSONfile
 {
-   public class Program
+    class Program
     {
-       public static void Main(string[] args)
+        static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Address Book Program");
             AddressBook addressBook = new AddressBook();
@@ -31,7 +31,7 @@ namespace UC14_ReadWriteToCSVfile
             do
             {
                 Console.WriteLine($"Working On {bookName} AddressBook\n");
-                Console.WriteLine("Choose An Option \n1.Add New Contact \n2.Edit Existing Contact \n3.Delete A Contact \n4.View A Contact \n5.View All Contacts \n6.Add New AddressBook \n7.Switch AddressBook \n8.Search Contact by City/State \n9.Count by City/State \n10.Sort Entries \n11.Read/Write AddressBook to text file \n12.Read/Write AddressBook to csv file \n0.Exit Application\n");
+                Console.WriteLine("Choose An Option \n1.Add New Contact \n2.Edit Existing Contact \n3.Delete A Contact \n4.View A Contact \n5.View All Contacts \n6.Add New AddressBook \n7.Switch AddressBook \n8.Search Contact by City/State \n9.Count by City/State \n10.Sort Entries \n11.Read/Write AddressBook to text file \n12.Read/Write AddressBook to csv file \n13.Read/Write AddressBook to JSON file \n0.Exit Application\n");
                 choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
@@ -164,6 +164,11 @@ namespace UC14_ReadWriteToCSVfile
                         CSVHandler handler = new CSVHandler();
                         handler.WriteToFile(addressBook.addressBookDictionary);
                         handler.ReadFromFile();
+                        break;
+                    case 13:
+                        JSONOperation json = new JSONOperation();
+                        json.WriteToFile(addressBook.addressBookDictionary);
+                        json.ReadFromFile();
                         break;
                     case 0:
                         Console.WriteLine("Thank You For Using Address Book System.");

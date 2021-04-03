@@ -6,11 +6,11 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace UC14_ReadWriteToCSVfile
+namespace UC15_ReadWriteToJSONfile
 {
     public class CSVHandler
     {
-        private string filePath = @"C:\Users\MansiAtey\Desktop\JSON\UC14-ReadWriteToCSVfile\UC14-ReadWriteToCSVfile\Utility\ABRecordsCSV.csv";
+        private string filePath = @"C:\Users\MansiAtey\Desktop\JSON\UC15-ReadWriteToJSONfile\UC15-ReadWriteToJSONfile\Utility\AddressBookCSV.csv";
         public void WriteToFile(Dictionary<string, AddressBook> addressBookDictionary)
         {
             using (StreamWriter writer = new StreamWriter(filePath))
@@ -41,8 +41,6 @@ namespace UC14_ReadWriteToCSVfile
                     }
                 }
             }
-
         }
     }
-}   
-
+}
