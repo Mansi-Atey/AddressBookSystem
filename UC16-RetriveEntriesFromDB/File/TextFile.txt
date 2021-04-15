@@ -1,0 +1,47 @@
+﻿--------------------------------------
+Person Details: 
+First name:Puja  
+Last name:Vibhute 
+Address:Swargate 
+City:Pune 
+State:MH 
+Zip:411004 
+Phone Number:8232343455 
+Email:vibhute@gmail.com
+--------------------------------------
+
+--------------------------------------
+Person Details: 
+First name:Arti 
+Last name:Dandge 
+Address:Ashish Plaza  
+City:Pune 
+State:MH 
+Zip:411048 
+Phone Number:9034348843 
+Email:asd@yahoo.com
+--------------------------------------
+
+--------------------------------------
+Person Details: 
+First name:Rama 
+Last name:Magare 
+Address:Beed 
+City:Beed 
+State:MH 
+Zip:413004 
+Phone Number:9527353477 
+Email:rmd@yahoo.com
+--------------------------------------
+
+--------------------------------------
+Person Details: 
+First name:Neha 
+Last name:Mane 
+Address:beed 
+City:Beed 
+State:MH 
+Zip:33 
+Phone Number:8765432114 
+Email:vnc@gmail.com
+--------------------------------------
