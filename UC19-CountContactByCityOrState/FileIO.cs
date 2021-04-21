@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace UC18_RetriveAllEntriesFromDatabase
+namespace UC19_CountContactByCityOrState
 {
-   public class FileIO
+    class FileIO
     {
         static String TextFilePath = @"C:\Users\HP\source\repos\AddressBookSystemUsingCSharp\AddressBookSystemUsingCSharp\File\TextFile.txt";
         static String CSVFilePath = @"C:\Users\HP\source\repos\AddressBookSystemUsingCSharp\AddressBookSystemUsingCSharp\File\CSVFile.csv";
@@ -122,5 +122,6 @@ namespace UC18_RetriveAllEntriesFromDatabase
                 Console.WriteLine("No such file exists");
             }
         }
+    
     }
 }

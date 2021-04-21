@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UC18_RetriveAllEntriesFromDatabase
+namespace UC19_CountContactByCityOrState
 {
-    public class AddressBookCoreOperations
+   public class AddressBookCoreOperations
     {
         public static void AddressBookCore()
         {

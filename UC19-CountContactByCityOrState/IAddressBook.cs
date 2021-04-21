@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UC18_RetriveAllEntriesFromDatabase
+namespace UC19_CountContactByCityOrState
 {
    public interface IAddressBook
     {

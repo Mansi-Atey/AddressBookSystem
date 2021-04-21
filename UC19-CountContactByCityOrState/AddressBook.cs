@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace UC18_RetriveAllEntriesFromDatabase
+namespace UC19_CountContactByCityOrState
 {
     class AddressBook : IAddressBook
     {
@@ -253,6 +253,5 @@ namespace UC18_RetriveAllEntriesFromDatabase
         {
             FileIO.ReadContactsFromJSONFile();
         }
-
     }
 }

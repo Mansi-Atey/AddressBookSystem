@@ -1,8 +1,8 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using UC18_RetriveAllEntriesFromDatabase;
+using UC19_CountContactByCityOrState;
 
-namespace UC18_Test
+namespace UC19_Test
 {
     [TestClass]
     public class UnitTest1
@@ -111,6 +111,23 @@ namespace UC18_Test
                 date_added = new DateTime(2016, 01, 01)
             };
             int result = database.RetrievePerticularContact(model);
+            Assert.AreEqual(expectedResult, result);
+        }
+
+        /// <summary>
+        /// Retrive Contacts from DB By City Or State
+        /// </summary>
+        [TestMethod]
+        public void GivenQuery_WhenRetrieveByCityOrState_ShouldRetrievContactAndReturnNoOfCounts()
+        {
+            int expectedResult = 4;
+            AddressBookDatabase database = new AddressBookDatabase();
+            AddressBookModel model = new AddressBookModel()
+            {
+                city_name = "Pune",
+                state_name = "Maharashtra"
+            };
+            int result = database.RetriveContactByCityOrState(model);
             Assert.AreEqual(expectedResult, result);
         }
     }

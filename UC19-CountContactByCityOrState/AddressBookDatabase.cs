@@ -4,7 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Text;
 
-namespace UC18_RetriveAllEntriesFromDatabase
+namespace UC19_CountContactByCityOrState
 {
    public class AddressBookDatabase
     {
@@ -193,6 +193,29 @@ namespace UC18_RetriveAllEntriesFromDatabase
             catch (Exception e)
             {
                 throw new Exception(e.Message);
+            }
+        }
+
+        public int RetriveContactByCityOrState(AddressBookModel addressBookModel)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("RetriveContactByCityOrState", connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@city_name", addressBookModel.city_name);
+                command.Parameters.AddWithValue("@state_name", addressBookModel.state_name);
+                connection.Open();
+                var Count = (int)command.ExecuteScalar();
+                SqlDataReader sqlDataReader = command.ExecuteReader();
+                if (sqlDataReader.HasRows)
+                {
+                    while (sqlDataReader.Read())
+                    {
+                        addressBookModel.person_id = sqlDataReader.GetInt32(0);
+                        Console.WriteLine("Number of Conctacts beloning to entered City Or State {0}", addressBookModel.person_id);
+                    }
+                }
+                return Count;
             }
         }
     }

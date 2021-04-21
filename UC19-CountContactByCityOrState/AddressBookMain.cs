@@ -1,23 +1,24 @@
 ﻿using System;
 
-namespace UC18_RetriveAllEntriesFromDatabase
+namespace UC19_CountContactByCityOrState
 {
-    public class AddressBookMain
+   public class AddressBookMain
     {
-        public static void Main(string[] args)
+       public static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Address book System ! ");
+            AddressBookDatabase database = new AddressBookDatabase();
+            AddressBookModel bookModel = new AddressBookModel();
             string isRepeate = "Yes";
             try
             {
                 do
                 {
-                    Console.WriteLine("\nHow do you you like to continue ? \n1.Retrieve Contacts from Database \n2.Add New Contact to Database \n3.Update Contact \n4.Retrieve Contact Between Perticular Date Range \n5.Continue Without Database \n6.Exit");
+                    Console.WriteLine("\nHow do you you like to continue ? \n1.Retrieve Contacts from Database \n2.Add New Contact to Database \n3.Update Contact \n4.Retrieve Contact Between Perticular Date Range \n5.Retrieve Contact By City Or State \n6.Continue Without Database \n7.Exit");
                     int choiceToContinue = Convert.ToInt32(Console.ReadLine());
                     switch (choiceToContinue)
                     {
                         case 1:
-                            AddressBookDatabase database = new AddressBookDatabase();
                             database.GetPersonDetailsfromDatabase();
                             break;
                         case 2:
@@ -59,16 +60,24 @@ namespace UC18_RetriveAllEntriesFromDatabase
                             break;
                         case 4:
                             AddressBookDatabase addressBook = new AddressBookDatabase();
-                            AddressBookModel bookModel = new AddressBookModel();
                             Console.WriteLine("Enter Date from which you want to see contact add ");
                             DateTime date = Convert.ToDateTime(Console.ReadLine());
                             bookModel.date_added = date;
                             addressBook.RetrievePerticularContact(bookModel);
                             break;
                         case 5:
-                            AddressBookCoreOperations.AddressBookCore();
+                            Console.WriteLine("Enter City \nRecently DB has Contacts from Mumbai, Pune, Jaipur, Jodhapur ");
+                            string city = Console.ReadLine();
+                            Console.WriteLine("Enter State Name \nRecently DB has Contacts from Two States Only i.e. Maharashtra and Rajasthan");
+                            string state = Console.ReadLine();
+                            bookModel.city_name = city;
+                            bookModel.state_name = state;
+                            database.RetriveContactByCityOrState(bookModel);
                             break;
                         case 6:
+                            AddressBookCoreOperations.AddressBookCore();
+                            break;
+                        case 7:
                             isRepeate = "No";
                             break;
                         default:
