@@ -4,9 +4,9 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Text;
 
-namespace UC20_AddNewContactToDatabase
+namespace UC21_ReadWriteWithJsonServer
 {
-    public class AddressBookDatabase
+   public class AddressBookDatabase
     {
         string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=AddressBookService;Integrated Security=True";
 
@@ -80,7 +80,7 @@ namespace UC20_AddNewContactToDatabase
                     command.Parameters.AddWithValue("@date_added", model.date_added);
                     connection.Open();
                     var result = command.ExecuteNonQuery();
-                    Console.WriteLine("New Contact Added Successfully");
+                    Console.WriteLine("New Contact Added Successfully !");
                     connection.Close();
                     if (result == 0)
                     {

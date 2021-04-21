@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>UC20_Test</RootNamespace>
+    <RootNamespace>UC21_Test</RootNamespace>
 
     <IsPackable>false</IsPackable>
   </PropertyGroup>
@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\UC20-AddNewContactToDatabase\UC20-AddNewContactToDatabase.csproj" />
+    <ProjectReference Include="..\UC21-ReadWriteWithJsonServer\UC21-ReadWriteWithJsonServer.csproj" />
   </ItemGroup>
 
 </Project>

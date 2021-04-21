@@ -3,8 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Text.Json;
 
-namespace UC20_AddNewContactToDatabase
+namespace UC21_ReadWriteWithJsonServer
 {
     public class FileIO
     {
@@ -93,7 +94,7 @@ namespace UC20_AddNewContactToDatabase
         {
             if (File.Exists(JSONFilePath))
             {
-                JsonSerializer jsonSerializer = new JsonSerializer();
+                Newtonsoft.Json.JsonSerializer jsonSerializer = new Newtonsoft.Json.JsonSerializer();
                 using (StreamWriter streamWriter = new StreamWriter(JSONFilePath))
                 using (JsonWriter writer = new JsonTextWriter(streamWriter))
                 {

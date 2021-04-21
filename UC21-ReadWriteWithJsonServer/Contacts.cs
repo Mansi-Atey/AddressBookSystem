@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UC20_AddNewContactToDatabase
+namespace UC21_ReadWriteWithJsonServer
 {
-   public class Contacts
+    public class Contacts
     {
         public string first_name;
         public string last_name;

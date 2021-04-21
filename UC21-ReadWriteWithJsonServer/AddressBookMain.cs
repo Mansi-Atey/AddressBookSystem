@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace UC20_AddNewContactToDatabase
+namespace UC21_ReadWriteWithJsonServer
 {
-    class AddressBookMain
+   public class AddressBookMain
     {
-        static void Main(string[] args)
+       public static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Address book System ! ");
             AddressBookDatabase database = new AddressBookDatabase();
@@ -111,5 +111,4 @@ namespace UC20_AddNewContactToDatabase
             }
         }
     }
-    
 }
