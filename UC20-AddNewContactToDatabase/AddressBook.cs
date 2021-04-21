@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace UC19_CountContactByCityOrState
+namespace UC20_AddNewContactToDatabase
 {
-    class AddressBook : IAddressBook
+    public class AddressBook : IAddressBook
     {
         List<Contacts> contactList;
         public static int personsCountInCity = 0;
@@ -253,5 +253,7 @@ namespace UC19_CountContactByCityOrState
         {
             FileIO.ReadContactsFromJSONFile();
         }
+
+
     }
 }

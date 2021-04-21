@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UC19_CountContactByCityOrState
+namespace UC20_AddNewContactToDatabase
 {
    public class AddressBookCoreOperations
     {
@@ -378,7 +378,7 @@ namespace UC19_CountContactByCityOrState
             } while (isRepeat.Equals("yes"));
         }
 
-         static void takeInput(AddressBook addressBook)
+        public static void takeInput(AddressBook addressBook)
         {
             try
             {

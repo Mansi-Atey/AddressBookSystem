@@ -1,14 +1,13 @@
 ﻿using System;
 
-namespace UC19_CountContactByCityOrState
+namespace UC20_AddNewContactToDatabase
 {
-   public class AddressBookMain
+    class AddressBookMain
     {
-       public static void Main(string[] args)
+        static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Address book System ! ");
             AddressBookDatabase database = new AddressBookDatabase();
-            AddressBookModel bookModel = new AddressBookModel();
             string isRepeate = "Yes";
             try
             {
@@ -23,14 +22,32 @@ namespace UC19_CountContactByCityOrState
                             break;
                         case 2:
                             AddressBookDatabase database1 = new AddressBookDatabase();
-                            AddressBookModel model = new AddressBookModel()
-                            {
-                                first_name = "Sagar",
-                                last_name = "Dandge",
-                                phone_number = "7535345545",
-                                email = "sagar1234@gmail.com",
-                            };
-                            database1.AddNewContact(model);
+                            AddressBookModel bookModel = new AddressBookModel();
+                            Console.WriteLine("Enter First Name");
+                            string firstName = Console.ReadLine();
+                            Console.WriteLine("Enter Last Name");
+                            string lastName = Console.ReadLine();
+                            Console.WriteLine("Enter Phone Number");
+                            string phone_no = Console.ReadLine();
+                            Console.WriteLine("Enter Email address");
+                            string emailId = Console.ReadLine();
+                            Console.WriteLine("Enter City and State Mapping id");
+                            int mapId = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Enter Address Book Type Id");
+                            int typeId = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Enter Address Book Name Id");
+                            int nameId = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Enter Date of adding Contact");
+                            DateTime dateAdded = Convert.ToDateTime(Console.ReadLine());
+                            bookModel.first_name = firstName;
+                            bookModel.last_name = lastName;
+                            bookModel.phone_number = phone_no;
+                            bookModel.email = emailId;
+                            bookModel.cityAndStateMappingId = mapId;
+                            bookModel.addressbook_type_id = typeId;
+                            bookModel.addressbook_name_id = nameId;
+                            bookModel.date_added = dateAdded;
+                            database1.AddNewContact(bookModel);
                             break;
                         case 3:
                             AddressBookDatabase updateDB = new AddressBookDatabase();
@@ -60,19 +77,21 @@ namespace UC19_CountContactByCityOrState
                             break;
                         case 4:
                             AddressBookDatabase addressBook = new AddressBookDatabase();
+                            AddressBookModel bookModel1 = new AddressBookModel();
                             Console.WriteLine("Enter Date from which you want to see contact add ");
                             DateTime date = Convert.ToDateTime(Console.ReadLine());
-                            bookModel.date_added = date;
-                            addressBook.RetrievePerticularContact(bookModel);
+                            bookModel1.date_added = date;
+                            addressBook.RetrievePerticularContact(bookModel1);
                             break;
                         case 5:
-                            Console.WriteLine("Enter City \nRecently DB has Contacts from Mumbai, Pune, Jaipur, Jodhapur ");
+                            AddressBookModel bookModel3 = new AddressBookModel();
+                            Console.WriteLine("Enter City Name");
                             string city = Console.ReadLine();
-                            Console.WriteLine("Enter State Name \nRecently DB has Contacts from Two States Only i.e. Maharashtra and Rajasthan");
+                            Console.WriteLine("Enter State Name");
                             string state = Console.ReadLine();
-                            bookModel.city_name = city;
-                            bookModel.state_name = state;
-                            database.RetriveContactByCityOrState(bookModel);
+                            bookModel3.city_name = city;
+                            bookModel3.state_name = state;
+                            database.RetriveContactByCityOrState(bookModel3);
                             break;
                         case 6:
                             AddressBookCoreOperations.AddressBookCore();

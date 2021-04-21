@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>UC19_Test</RootNamespace>
+    <RootNamespace>UC20_Test</RootNamespace>
 
     <IsPackable>false</IsPackable>
   </PropertyGroup>
@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\UC19-CountContactByCityOrState\UC19-CountContactByCityOrState.csproj" />
+    <ProjectReference Include="..\UC20-AddNewContactToDatabase\UC20-AddNewContactToDatabase.csproj" />
   </ItemGroup>
 
 </Project>
