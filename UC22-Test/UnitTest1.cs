@@ -1,8 +1,8 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using UC21_ReadWriteWithJsonServer;
+using UC22_ReadContactUsingJsonServer;
 
-namespace UC21_Test
+namespace UC22_Test
 {
     [TestClass]
     public class UnitTest1

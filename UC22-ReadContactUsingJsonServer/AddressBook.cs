@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace UC21_ReadWriteWithJsonServer
+namespace UC22_ReadContactUsingJsonServer
 {
-    class AddressBook : IAddressBook
+   public class AddressBook : IAddressBook
     {
         List<Contacts> contactList;
         public static int personsCountInCity = 0;

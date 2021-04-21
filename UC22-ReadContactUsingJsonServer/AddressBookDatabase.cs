@@ -4,7 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Text;
 
-namespace UC21_ReadWriteWithJsonServer
+namespace UC22_ReadContactUsingJsonServer
 {
    public class AddressBookDatabase
     {

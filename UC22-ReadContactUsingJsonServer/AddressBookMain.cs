@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace UC21_ReadWriteWithJsonServer
+namespace UC22_ReadContactUsingJsonServer
 {
    public class AddressBookMain
     {
-       public static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Address book System ! ");
             AddressBookDatabase database = new AddressBookDatabase();

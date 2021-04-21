@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UC21_ReadWriteWithJsonServer
+namespace UC22_ReadContactUsingJsonServer
 {
-    public class AddressBookCoreOperations
+   public class AddressBookCoreOperations
     {
         public static void AddressBookCore()
         {
@@ -378,7 +378,7 @@ namespace UC21_ReadWriteWithJsonServer
             } while (isRepeat.Equals("yes"));
         }
 
-         static void takeInput(AddressBook addressBook)
+        public static void takeInput(AddressBook addressBook)
         {
             try
             {

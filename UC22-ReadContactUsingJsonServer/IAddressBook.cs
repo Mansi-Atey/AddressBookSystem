@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UC21_ReadWriteWithJsonServer
+namespace UC22_ReadContactUsingJsonServer
 {
     public interface IAddressBook
     {

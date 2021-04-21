@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>UC21_Test</RootNamespace>
+    <RootNamespace>UC22_Test</RootNamespace>
 
     <IsPackable>false</IsPackable>
   </PropertyGroup>
@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\UC21-ReadWriteWithJsonServer\UC21-ReadWriteWithJsonServer.csproj" />
+    <ProjectReference Include="..\UC22-ReadContactUsingJsonServer\UC22-ReadContactUsingJsonServer.csproj" />
   </ItemGroup>
 
 </Project>

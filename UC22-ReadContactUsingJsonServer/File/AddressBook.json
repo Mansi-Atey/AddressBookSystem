@@ -1,0 +1,59 @@
+﻿{
+  "Contacts": [
+    {
+      "id": 1,
+      "first_name": "Rucha",
+      "last_name": "Swami",
+      "address": "Pune",
+      "city": "Pune",
+      "state": "MH",
+      "zip": 44222,
+      "phone_number": 9876543223,
+      "email": "rucha@gmail.com"
+    },
+    {
+      "id": 2,
+      "first_name": "Seema",
+      "last_name": "chopde",
+      "address": "nashik",
+      "city": "nashik",
+      "state": "MH",
+      "zip": 449993,
+      "phone_number": 883838383,
+      "email": "seema@gmail.com"
+    },
+    {
+      "first_name": "renu",
+      "last_name": "chaudhary",
+      "address": "pune",
+      "city": "pune",
+      "state": "mh",
+      "zip": "40040",
+      "phone_number": "400055",
+      "email": "renu@gmail.com",
+      "id": 3
+    },
+    {
+      "id": 4,
+      "first_name": "Sita",
+      "last_name": "Raman",
+      "address": "Goa",
+      "city": "Goa",
+      "state": "Goa",
+      "zip": 4000221,
+      "phone_number": 6564354534,
+      "email": "sita@gmail.com"
+    },
+    {
+      "first_name": "mamta",
+      "last_name": "chaudhary",
+      "address": "pune",
+      "city": "pune",
+      "state": "mh",
+      "zip": "40040",
+      "phone_number": "400055",
+      "email": "priya@gmail.com",
+      "id": 5
+    }
+  ]
+}

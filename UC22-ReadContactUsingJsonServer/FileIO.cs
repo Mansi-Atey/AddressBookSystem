@@ -3,11 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using System.Text.Json;
 
-namespace UC21_ReadWriteWithJsonServer
+namespace UC22_ReadContactUsingJsonServer
 {
-    public class FileIO
+   public class FileIO
     {
         static String TextFilePath = @"C:\Users\HP\source\repos\AddressBookSystemUsingCSharp\AddressBookSystemUsingCSharp\File\TextFile.txt";
         static String CSVFilePath = @"C:\Users\HP\source\repos\AddressBookSystemUsingCSharp\AddressBookSystemUsingCSharp\File\CSVFile.csv";
@@ -94,7 +93,7 @@ namespace UC21_ReadWriteWithJsonServer
         {
             if (File.Exists(JSONFilePath))
             {
-                Newtonsoft.Json.JsonSerializer jsonSerializer = new Newtonsoft.Json.JsonSerializer();
+                JsonSerializer jsonSerializer = new JsonSerializer();
                 using (StreamWriter streamWriter = new StreamWriter(JSONFilePath))
                 using (JsonWriter writer = new JsonTextWriter(streamWriter))
                 {
