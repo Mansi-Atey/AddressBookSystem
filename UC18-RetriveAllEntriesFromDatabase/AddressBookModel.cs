@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UC17_UpdateContactInfo
+namespace UC18_RetriveAllEntriesFromDatabase
 {
-    public class AddressBookModel
+   public class AddressBookModel
     {
         public int person_id { get; set; }
         public string first_name { get; set; }
@@ -19,5 +19,6 @@ namespace UC17_UpdateContactInfo
         public string state_name { get; set; }
         public string addressbook_type { get; set; }
         public string addressbook_name { get; set; }
+        public DateTime date_added { get; set; }
     }
 }

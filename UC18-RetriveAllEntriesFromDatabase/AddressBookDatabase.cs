@@ -4,9 +4,9 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Text;
 
-namespace UC17_UpdateContactInfo
+namespace UC18_RetriveAllEntriesFromDatabase
 {
-    public class AddressBookDatabase
+   public class AddressBookDatabase
     {
         string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=AddressBookService;Integrated Security=True";
 
@@ -145,6 +145,50 @@ namespace UC17_UpdateContactInfo
                     }
                     return true;
                 }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        public int RetrievePerticularContact(AddressBookModel addressBookModel)
+        {
+            int Count = 0;
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    SqlCommand command = new SqlCommand("RetrievePerticularContact", connection);
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@date_added", addressBookModel.date_added);
+                    connection.Open();
+                    SqlDataReader sqlDataReader = command.ExecuteReader();
+                    if (sqlDataReader.HasRows)
+                    {
+                        while (sqlDataReader.Read())
+                        {
+                            addressBookModel.person_id = sqlDataReader.GetInt32(0);
+                            addressBookModel.first_name = sqlDataReader.GetString(1);
+                            addressBookModel.last_name = sqlDataReader.GetString(2);
+                            addressBookModel.phone_number = sqlDataReader.GetString(3);
+                            addressBookModel.email = sqlDataReader.GetString(4);
+                            addressBookModel.cityAndStateMappingId = sqlDataReader.GetInt32(5);
+                            addressBookModel.addressbook_type_id = sqlDataReader.GetInt32(6);
+                            addressBookModel.addressbook_name_id = sqlDataReader.GetInt32(7);
+                            addressBookModel.date_added = sqlDataReader.GetDateTime(8);
+                            addressBookModel.city_name = sqlDataReader.GetString(13);
+                            addressBookModel.zip = sqlDataReader.GetInt32(14);
+                            addressBookModel.state_name = sqlDataReader.GetString(16);
+                            addressBookModel.addressbook_type = sqlDataReader.GetString(18);
+                            addressBookModel.addressbook_name = sqlDataReader.GetString(20);
+                            Count++;
+                            Console.WriteLine("{0}, {1}, {2}, {4}, {5}, {6}, {7}, {8}, {9}, {10}", addressBookModel.person_id, addressBookModel.first_name, addressBookModel.last_name, addressBookModel.phone_number,
+                                addressBookModel.email, addressBookModel.city_name, addressBookModel.zip, addressBookModel.state_name, addressBookModel.addressbook_type, addressBookModel.addressbook_name, addressBookModel.date_added);
+                        }
+                    }
+                }
+                return Count;
             }
             catch (Exception e)
             {

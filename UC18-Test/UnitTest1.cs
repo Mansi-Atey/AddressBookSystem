@@ -1,7 +1,8 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using UC17_UpdateContactInfo;
+using System;
+using UC18_RetriveAllEntriesFromDatabase;
 
-namespace UC17_test
+namespace UC18_Test
 {
     [TestClass]
     public class UnitTest1
@@ -97,6 +98,21 @@ namespace UC17_test
             Assert.AreEqual(expectedResult, result);
         }
 
+        /// <summary>
+        /// Retrive Contacts from perticular date to today
+        /// </summary>
+        [TestMethod]
+        public void GivenQuery_WhenRetrieveInPerticulatDateRange_ShouldRetrievContactAndReturnNoOfCounts()
+        {
+            int expectedResult = 6;
+            AddressBookDatabase database = new AddressBookDatabase();
+            AddressBookModel model = new AddressBookModel()
+            {
+                date_added = new DateTime(2016, 01, 01)
+            };
+            int result = database.RetrievePerticularContact(model);
+            Assert.AreEqual(expectedResult, result);
+        }
     }
-    }
-
+    
+}

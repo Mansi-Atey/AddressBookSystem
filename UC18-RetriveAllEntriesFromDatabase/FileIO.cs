@@ -3,9 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using System.Text.Json;
 
-namespace UC17_UpdateContactInfo
+namespace UC18_RetriveAllEntriesFromDatabase
 {
    public class FileIO
     {
@@ -94,7 +93,7 @@ namespace UC17_UpdateContactInfo
         {
             if (File.Exists(JSONFilePath))
             {
-                Newtonsoft.Json.JsonSerializer jsonSerializer = new Newtonsoft.Json.JsonSerializer();
+                JsonSerializer jsonSerializer = new JsonSerializer();
                 using (StreamWriter streamWriter = new StreamWriter(JSONFilePath))
                 using (JsonWriter writer = new JsonTextWriter(streamWriter))
                 {

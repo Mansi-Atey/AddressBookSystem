@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UC17_UpdateContactInfo
+namespace UC18_RetriveAllEntriesFromDatabase
 {
-    public class Contacts
+   public class Contacts
     {
         public string first_name;
         public string last_name;
@@ -35,4 +35,3 @@ namespace UC17_UpdateContactInfo
         }
     }
 }
-

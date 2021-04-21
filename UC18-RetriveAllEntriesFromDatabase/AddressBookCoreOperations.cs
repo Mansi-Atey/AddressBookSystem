@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UC17_UpdateContactInfo
+namespace UC18_RetriveAllEntriesFromDatabase
 {
-   public class AddressBookCoreOperations
+    public class AddressBookCoreOperations
     {
         public static void AddressBookCore()
         {
@@ -378,7 +378,7 @@ namespace UC17_UpdateContactInfo
             } while (isRepeat.Equals("yes"));
         }
 
-        public static void takeInput(AddressBook addressBook)
+         static void takeInput(AddressBook addressBook)
         {
             try
             {

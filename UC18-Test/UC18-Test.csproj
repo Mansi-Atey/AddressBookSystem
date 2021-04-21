@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>UC17_test</RootNamespace>
+    <RootNamespace>UC18_Test</RootNamespace>
 
     <IsPackable>false</IsPackable>
   </PropertyGroup>
@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\UC17-UpdateContactInfo\UC17-UpdateContactInfo.csproj" />
+    <ProjectReference Include="..\UC18-RetriveAllEntriesFromDatabase\UC18-RetriveAllEntriesFromDatabase.csproj" />
   </ItemGroup>
 
 </Project>

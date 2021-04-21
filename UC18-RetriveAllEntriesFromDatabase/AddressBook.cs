@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace UC17_UpdateContactInfo
+namespace UC18_RetriveAllEntriesFromDatabase
 {
-   public class AddressBook : IAddressBook
+    class AddressBook : IAddressBook
     {
         List<Contacts> contactList;
         public static int personsCountInCity = 0;
@@ -253,7 +253,6 @@ namespace UC17_UpdateContactInfo
         {
             FileIO.ReadContactsFromJSONFile();
         }
+
     }
-
 }
-
