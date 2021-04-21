@@ -4,7 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Text;
 
-namespace UC16_RetriveEntriesFromDB
+namespace UC17_UpdateContactInfo
 {
     public class AddressBookDatabase
     {
@@ -102,9 +102,13 @@ namespace UC16_RetriveEntriesFromDB
                 {
                     SqlCommand command = new SqlCommand("UpdateContact", connection);
                     command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@first_name", model.first_name);
                     command.Parameters.AddWithValue("@last_name", model.last_name);
                     command.Parameters.AddWithValue("@phone_number", model.phone_number);
                     command.Parameters.AddWithValue("@email", model.email);
+                    command.Parameters.AddWithValue("@city_state_mapping_id", model.cityAndStateMappingId);
+                    command.Parameters.AddWithValue("@addressbook_type_id", model.addressbook_type_id);
+                    command.Parameters.AddWithValue("@addressboon_name_id", model.addressbook_name_id);
                     connection.Open();
                     var result = command.ExecuteNonQuery();
                     Console.WriteLine("Contact Updated Successfully !");

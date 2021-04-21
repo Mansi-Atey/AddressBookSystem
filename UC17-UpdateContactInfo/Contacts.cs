@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UC16_RetriveEntriesFromDB
+namespace UC17_UpdateContactInfo
 {
     public class Contacts
     {
@@ -35,3 +35,4 @@ namespace UC16_RetriveEntriesFromDB
         }
     }
 }
+

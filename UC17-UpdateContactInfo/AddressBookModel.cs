@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UC16_RetriveEntriesFromDB
+namespace UC17_UpdateContactInfo
 {
-   public class AddressBookModel
+    public class AddressBookModel
     {
         public int person_id { get; set; }
         public string first_name { get; set; }

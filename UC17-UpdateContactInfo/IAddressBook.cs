@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UC16_RetriveEntriesFromDB
+namespace UC17_UpdateContactInfo
 {
-   public interface IAddressBook
+    public interface IAddressBook
     {
         public void AddContact(string first_name, string LastName, string address, string city, string state, int zip, long phone_number, string email);
         public void EditContact(string first_name);

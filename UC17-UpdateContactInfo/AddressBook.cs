@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace UC16_RetriveEntriesFromDB
+namespace UC17_UpdateContactInfo
 {
-    public class AddressBook : IAddressBook
+   public class AddressBook : IAddressBook
     {
         List<Contacts> contactList;
         public static int personsCountInCity = 0;
@@ -253,9 +251,9 @@ namespace UC16_RetriveEntriesFromDB
 
         public void ReadContactsFronJSON()
         {
-            File.ReadContactsFromJSONFile();
+            FileIO.ReadContactsFromJSONFile();
         }
     }
+
 }
-    
 

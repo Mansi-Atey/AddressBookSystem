@@ -1,8 +1,11 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
+using System.Text.Json;
 
-namespace UC16_RetriveEntriesFromDB
+namespace UC17_UpdateContactInfo
 {
    public class FileIO
     {
@@ -91,7 +94,7 @@ namespace UC16_RetriveEntriesFromDB
         {
             if (File.Exists(JSONFilePath))
             {
-                JsonSerializer jsonSerializer = new JsonSerializer();
+                Newtonsoft.Json.JsonSerializer jsonSerializer = new Newtonsoft.Json.JsonSerializer();
                 using (StreamWriter streamWriter = new StreamWriter(JSONFilePath))
                 using (JsonWriter writer = new JsonTextWriter(streamWriter))
                 {
